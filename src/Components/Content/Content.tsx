@@ -18,7 +18,7 @@ const Content = () => {
             <Card.Body className="card-body">
               <Card.Title className="card-title">Pedro Takahashi - Front End Developer</Card.Title>
               <Card.Text>
-                Olá, eu sou Pedro Takahashi e este é meu portfolio no github, é so clicar e conhecer
+                Olá, eu sou Pedro Takahashi e estes são meus repositorios no github, clique aqui e conheça!!
               </Card.Text>
               <Button variant="#563d7c" href="https://github.com/pedrotakahashi/" target="blank"><GrGithub className="icon-github" /></Button>
             </Card.Body>

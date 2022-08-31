@@ -8,7 +8,7 @@ import Projects from "../Pages/Project/Projects";
 
 const ProjectRoutes = () => {
    return(
-    <HashRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
            <Routes>
                 <Route element = { <About/> }  path="/sobre" />
                 <Route element = { <Contact /> }  path="/contato" />
