@@ -1,0 +1,15 @@
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #212529;
+}
+
+.navbar-item {
+  color: white !important;
+
+}
+.navbar-item:hover {
+  background-color: #563d7c;
+  border-radius:2px ;
+}

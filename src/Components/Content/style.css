@@ -1,0 +1,105 @@
+.card-content {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 375px;
+  background-color: #3D639D;
+  color: white;
+  text-align: center;
+}
+
+.card-body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.icon-github {
+  width: 86px;
+  height: 90px;
+}
+.icon-github:hover {
+  color: #BEC2C9;
+}
+
+.central-card { 
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: #563d7c;
+  color: white;
+  text-align: center;
+  height: 250px;
+}
+
+.central-card:hover {
+  background-color: #688FC9;
+  transition: 350ms;
+}
+
+.middle-card {
+  background-color: #3D639D;
+}
+
+.icon-card {
+  width: 75px;
+  height: 80px;
+}
+
+.form {
+  color: white;
+}
+
+.content-contact {
+  margin-top: 75px;
+}
+
+.card-about-me {
+  width: 25rem;
+  background-color: transparent;
+  border-color: #563d7c;
+  color: #BEC2C9;
+}
+
+.card-tibia {
+  width: 25rem;
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+  color: Green;
+}
+
+.projects-card {
+  width: 25rem;
+  background-color: transparent;
+  border-color: #563d7c;
+  color: #BEC2C9;
+  margin-top: 11rem;
+}
+.projects-card:hover {
+  background-color: #8251B3;
+  transition: 350ms;
+}
+
+.text-project {
+  text-align: center;
+}
+  
+.box-button {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-submit {
+  background-color: #8251B3;
+  transition: 350ms;
+  border: none;
+  display: flex;
+  align-self: center;
+}
+
+.btn-submit:hover{
+  background-color: #688FC9;
+}

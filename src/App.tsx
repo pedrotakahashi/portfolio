@@ -1,11 +1,13 @@
 import React from 'react';
-import '../src/Assets/styles/base.css'
-function App() {
+import './style.css';
+import ProjectRoutes from './Routes/ProjectRoutes';
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header" />
-      <h2>começa aqui</h2>
+      <ProjectRoutes />
     </div>
+
   );
 }
 
