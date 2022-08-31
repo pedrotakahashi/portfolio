@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react"
 import { Button, Container, Row, Col, Form } from "react-bootstrap"
 import { db } from "../../Firebase/fireBase";
 import { collection, getDocs, addDoc } from "firebase/firestore";
-import { useNavigate } from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css'
