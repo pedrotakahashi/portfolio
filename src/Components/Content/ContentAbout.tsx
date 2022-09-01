@@ -9,7 +9,7 @@ const Content = () => {
   return (
     <Container className="content-contact">
       <Row align="center">
-        <Col>
+        <Col sm={12}>
           <Card className="card-about-me">
             <Card.Img variant="top" src={profilePicture} />
             <Card.Body>

@@ -7,9 +7,9 @@ import { GiFox } from "react-icons/gi";
 
 const Footer = () => {
   return (
-    <Container fluid className="fixed-bottom">
-      <Row>
-        <Col>
+    
+      <Row className="fixed-bottom">
+        <Col sm={12} >  
           <Navbar bg="dark" variant="dark" className="footer" >
             <Container className="justify-content-center">
               <Navbar.Brand >
@@ -20,7 +20,6 @@ const Footer = () => {
           </Navbar>
         </Col>
       </Row>
-    </Container>
 
   )
 }

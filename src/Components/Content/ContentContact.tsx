@@ -34,8 +34,7 @@ const Content = () => {
   return (
     <Container className="content-contact">
       <Row lg={3} className="mx-auto">
-        <Col></Col>
-        <Col>
+        <Col sm={12} lg={12} className="d-flex justify-content-center">
           <Form className="form">
             <Form.Group className="mb-3" >
               <Form.Label>Coloque um nome Legal</Form.Label>
