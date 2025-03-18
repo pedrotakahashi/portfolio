@@ -11,9 +11,7 @@ This portfolio was built using **React with TypeScript** and modern web developm
 - **State Management & Data Fetching:** React Query, React Hook Form, Zod
 - **UI Components & Animations:** Radix UI, Styled Components, Lucide Icons, Recharts
 - **Routing & Navigation:** React Router DOM
-- **Backend & API Integration:** Nest.js, Node.js
 - **Build & Development Tools:** Vite, ESLint, TypeScript, PostCSS
-- **Testing & CI/CD:** Jest (planned), CI/CD pipeline with GitHub Actions (planned)
 - **Design & Customization:** RPG-based aesthetics inspired by fantasy worlds
 
 ## 🔧 Installation & Setup
