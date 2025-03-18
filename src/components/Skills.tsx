@@ -1,34 +1,47 @@
-
-import { useState } from 'react';
-import D20Animation from './D20Animation';
+import { useEffect, useState } from "react";
+import D20Animation from "./D20Animation";
 
 interface Skill {
   name: string;
-  category: 'frontend' | 'backend' | 'other';
+  category: "frontend" | "backend" | "other";
   proficiency: number;
 }
 
 const Skills = () => {
-  const [activeTab, setActiveTab] = useState<'all' | 'frontend' | 'backend' | 'other'>('all');
+  const [activeTab, setActiveTab] = useState<"all" | "frontend" | "backend" | "other">("all");
+  const [animatedSkills, setAnimatedSkills] = useState<{ [key: string]: boolean }>({});
+
+  useEffect(() => {
+    // Após a montagem do componente, ativa a animação das barras
+    const timer = setTimeout(() => {
+      setAnimatedSkills((prev) =>
+        skills.reduce((acc, skill) => {
+          acc[skill.name] = true;
+          return acc;
+        }, {} as { [key: string]: boolean })
+      );
+    }, 200); // Delay para garantir que o React renderize o DOM antes da animação
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const skills: Skill[] = [
-    { name: 'JavaScript', category: 'frontend', proficiency: 90 },
-    { name: 'HTML', category: 'frontend', proficiency: 90 },
-    { name: 'CSS', category: 'frontend', proficiency: 90 },
-    { name: 'React', category: 'frontend', proficiency: 90 },
-    { name: 'Next.js', category: 'frontend', proficiency: 70 },
-    { name: 'Node.js', category: 'backend', proficiency: 80 },
-    { name: 'Nest.js', category: 'backend', proficiency: 60 },
-    { name: 'SQL', category: 'backend', proficiency: 90 },
-    { name: 'Spring Boot', category: 'backend', proficiency: 50 },
-    { name: 'Git', category: 'other', proficiency: 90 },
-    { name: 'Docker', category: 'other', proficiency: 50 },
-    { name: 'TypeScript', category: 'frontend', proficiency: 80 },
+    { name: "JavaScript", category: "frontend", proficiency: 90 },
+    { name: "HTML", category: "frontend", proficiency: 90 },
+    { name: "CSS", category: "frontend", proficiency: 90 },
+    { name: "React", category: "frontend", proficiency: 90 },
+    { name: "Next.js", category: "frontend", proficiency: 70 },
+    { name: "Node.js", category: "backend", proficiency: 80 },
+    { name: "Nest.js", category: "backend", proficiency: 60 },
+    { name: "SQL", category: "backend", proficiency: 90 },
+    { name: "Spring Boot", category: "backend", proficiency: 50 },
+    { name: "Git", category: "other", proficiency: 90 },
+    { name: "Docker", category: "other", proficiency: 50 },
+    { name: "TypeScript", category: "frontend", proficiency: 80 },
   ];
 
-  const filteredSkills = activeTab === 'all'
-    ? skills
-    : skills.filter(skill => skill.category === activeTab);
+  const filteredSkills =
+    activeTab === "all" ? skills : skills.filter((skill) => skill.category === activeTab);
 
   const getCategoryColor = (category: string) => {
     switch (category) {
@@ -42,23 +55,25 @@ const Skills = () => {
         return "bg-gray-500 text-white";
     }
   };
+
   return (
-    <section id="skills" className=" bg-white/50">
+    <section id="skills" className="bg-white/50">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="section-title">Skill Tree </h2>
+        <h2 className="section-title">Skill Tree</h2>
 
         <div className="max-w-4xl mx-auto">
           {/* Tabs */}
           <div className="flex justify-center mb-8">
             <div className="inline-flex p-1 rounded-lg bg-gray-100">
-              {['all', 'frontend', 'backend', 'other'].map((tab) => (
+              {["all", "frontend", "backend", "other"].map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab as any)}
-                  className={`px-4 py-2 rounded-md font-medium transition-all duration-300 ${activeTab === tab
-                    ? 'bg-white text-rpg-deep-blue shadow-sm'
-                    : 'text-gray-500 hover:text-rpg-royal-blue'
-                    }`}
+                  className={`px-4 py-2 rounded-md font-medium transition-all duration-300 ${
+                    activeTab === tab
+                      ? "bg-white text-rpg-deep-blue shadow-sm"
+                      : "text-gray-500 hover:text-rpg-royal-blue"
+                  }`}
                 >
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}
                 </button>
@@ -89,14 +104,13 @@ const Skills = () => {
                   </div>
                 </div>
 
+                {/* Barra de progresso corrigida */}
                 <div className="w-full bg-gray-200 rounded-full h-2.5 mb-1">
                   <div
                     className="bg-rpg-light-blue h-2.5 rounded-full transition-all duration-1000"
                     style={{
-                      width: "0%",
-                      animation: `expand-width 1.5s ease-out ${index * 0.1}s forwards`,
+                      width: animatedSkills[skill.name] ? `${skill.proficiency}%` : "0%",
                     }}
-                    data-width={`${skill.proficiency}%`}
                   ></div>
                 </div>
 
