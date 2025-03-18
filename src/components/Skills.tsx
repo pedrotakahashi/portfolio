@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import D20Animation from "./D20Animation";
 
 interface Skill {
   name: string;
@@ -20,7 +19,7 @@ const Skills = () => {
           return acc;
         }, {} as { [key: string]: boolean })
       );
-    }, 200); // Delay para garantir que o React renderize o DOM antes da animação
+    }, 200);
 
     return () => clearTimeout(timer);
   }, []);
@@ -69,11 +68,10 @@ const Skills = () => {
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab as any)}
-                  className={`px-4 py-2 rounded-md font-medium transition-all duration-300 ${
-                    activeTab === tab
+                  className={`px-4 py-2 rounded-md font-medium transition-all duration-300 ${activeTab === tab
                       ? "bg-white text-rpg-deep-blue shadow-sm"
                       : "text-gray-500 hover:text-rpg-royal-blue"
-                  }`}
+                    }`}
                 >
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}
                 </button>
@@ -104,7 +102,6 @@ const Skills = () => {
                   </div>
                 </div>
 
-                {/* Barra de progresso corrigida */}
                 <div className="w-full bg-gray-200 rounded-full h-2.5 mb-1">
                   <div
                     className="bg-rpg-light-blue h-2.5 rounded-full transition-all duration-1000"
@@ -126,7 +123,11 @@ const Skills = () => {
           {/* Skills tagcloud */}
           <div className="mt-12 text-center opacity-0 animate-fade-in-delay-2">
             <div className="inline-flex items-center px-4 py-1 rounded-full bg-rpg-royal-blue/10 text-rpg-royal-blue text-sm font-medium mb-4">
-              <D20Animation size={"5x"} className="mr-2" />
+              <img
+                src="/assets/images/adventurer.png"
+                alt="Adventurer Icon"
+                className="w-10 h-10 mr-2"
+              />
               <span>Other Technologies</span>
             </div>
 

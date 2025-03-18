@@ -8,10 +8,9 @@ This portfolio was built using **React with TypeScript** and modern web developm
 
 ### **📌 Technologies & Libraries**
 - **Frontend:** React, TypeScript, Tailwind CSS, Radix UI
-- **State Management & Data Fetching:** React Query, React Hook Form, Zod
 - **UI Components & Animations:** Radix UI, Styled Components, Lucide Icons, Recharts
 - **Routing & Navigation:** React Router DOM
-- **Build & Development Tools:** Vite, ESLint, TypeScript, PostCSS
+- **Build & Development Tools:** Vite, ESLint, TypeScript
 - **Design & Customization:** RPG-based aesthetics inspired by fantasy worlds
 
 ## 🔧 Installation & Setup

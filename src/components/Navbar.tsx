@@ -42,7 +42,7 @@ const Navbar = () => {
             href="#" 
             className="flex items-center space-x-2 text-rpg-deep-blue"
           >
-            <D20Animation size={32} color="#1A365D" />
+            <D20Animation size={"3x"} color="red" />
             <span className="font-display text-xl md:text-2xl font-bold">
               Pedro Takahashi
             </span>

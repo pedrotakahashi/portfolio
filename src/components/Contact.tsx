@@ -34,22 +34,24 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="">
       <div className="container mx-auto px-4 md:px-6">
         <h2 className="section-title">Contact me</h2>
 
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="flex flex-col md:flex-row md:justify-between gap-6 md:gap-10">
             {/* Informações de contato */}
-            <div className="opacity-0 animate-fade-in">
-              <div className="glass-card p-8 h-full">
-                <div className="flex items-center mb-6">
+            <div className="opacity-1 animate-fade-in w-full md:w-1/2">
+              <div className="glass-card p-6 md:p-8">
+                <div className="flex items-center mb-4 md:mb-6">
                   <D20Animation size={"3x"} color="#1A365D" className="mr-3" />
-                  <h3 className="font-display text-2xl text-rpg-deep-blue">Let's Connect</h3>
+                  <h3 className="font-display text-xl md:text-2xl text-rpg-deep-blue">
+                    Let's Connect
+                  </h3>
                 </div>
 
                 <p className="text-gray-600 mb-8">
-                  Ready to start a new project or just want to chat about technology? 
+                  Ready to start a new project or just want to chat about technology?
                   Feel free to reach out through any of these channels:
                 </p>
 
@@ -94,11 +96,13 @@ const Contact = () => {
             </div>
 
             {/* Formulário */}
-            <div className="opacity-0 animate-fade-in-delay-1">
-              <div className="glass-card p-8">
-                <div className="flex items-center mb-6">
+            <div className="opacity-0 animate-fade-in-delay-1 w-full md:w-1/2">
+              <div className="glass-card p-6 md:p-8">
+                <div className="flex items-center mb-4 md:mb-6">
                   <D20Animation size={"3x"} color="#1A365D" className="mr-3" />
-                  <h3 className="font-display text-2xl text-rpg-deep-blue">Send  a Message</h3>
+                  <h3 className="font-display text-xl md:text-2xl text-rpg-deep-blue">
+                    Send a Message
+                  </h3>
                 </div>
 
                 <form className="space-y-6">
@@ -162,6 +166,7 @@ const Contact = () => {
       </div>
     </section>
   );
+
 };
 
 export default Contact;
